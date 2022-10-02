@@ -4,8 +4,8 @@ import sys
 
 
 
-TARGET_PATH = r'C:\Users\kassent\Desktop\UnrealPakSwitch'
-OCTO_PATH = r'D:\SteamLauncher\steamapps\common\OCTOPATH TRAVELER\Octopath_Traveler\Content\Paks'
+TARGET_PATH = r'F:\SteamLibrary\steamapps\common\OCTOPATH TRAVELER\Octopath_Traveler_Localization_Fix\UnrealPakSwitch'
+OCTO_PATH = r'F:\SteamLibrary\steamapps\common\OCTOPATH TRAVELER\Octopath_Traveler\Content\Paks'
 
 def main():
     scriptFolder = os.path.split(__file__)[0]
@@ -33,7 +33,7 @@ def main():
     executeResult = os.popen(r'UnrealPak.exe ..\..\..\Octopath_Traveler-WindowsNoEditor_1_P.pak -Create=..\..\..\lista.txt -compress')
     for line in executeResult.read().splitlines():
         print(line)
-    shutil.copy2(os.path.join(TARGET_PATH, 'Octopath_Traveler-WindowsNoEditor_1_P.pak'), OCTO_PATH)
+    shutil.copy2(os.path.join(TARGET_PATH, 'Octopath_Traveler-WindowsNoEditor_cnfix.pak'), OCTO_PATH)
 
 if __name__ == '__main__':
     main()
